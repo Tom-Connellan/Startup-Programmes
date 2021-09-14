@@ -11,3 +11,7 @@ if Length > 6:
     print("Password is valid")
 else:
     print("Password is invalid")
+
+
+ ## ACS Please put in a comment at the end of the if statment - it helps when
+ ## ACS writing pseudo code later on in the course   

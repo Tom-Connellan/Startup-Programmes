@@ -11,3 +11,5 @@ dig = number%ten
 
 #showing the results
 print(hund, ten1, dig)
+
+##ACS VEry good. Perghaps a better print at the end e.g. 3 hundreds, 2 tens ...

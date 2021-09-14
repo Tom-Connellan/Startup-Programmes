@@ -8,3 +8,5 @@ divisor = int(input("Input the divisor: "))
 
 #calculate the number and remainder
 print(str(integer//divisor) + " remainder " + str(integer%divisor))
+
+## ACS - Good work

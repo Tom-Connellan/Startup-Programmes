@@ -8,11 +8,13 @@ counter = 0
 while counter < length:
     asci = ord(sent[counter])
     if asci == 122:
+        asci = 98
+    elif asci == 121:
         asci = 97
     elif asci == 32:
         asci=32
     else:
-        asci = asci + 1
+        asci = asci + 2
     #endif
     final = final + str(chr(asci))
     counter = counter + 1

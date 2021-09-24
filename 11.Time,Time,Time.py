@@ -7,3 +7,5 @@ hours = int(hours) * 60 * 60
 minutes = int(minutes) * 60 * 60
 seconds = int(seconds)
 print(hours + minutes + seconds)
+
+## ACS = Good work

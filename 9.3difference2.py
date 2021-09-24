@@ -12,3 +12,5 @@ while counter < 3:
 #Sorts the array from largest - smallest
 num = sorted(num)
 print(num)
+
+## ACS SUing sorted isn't really yourn algorithm!!

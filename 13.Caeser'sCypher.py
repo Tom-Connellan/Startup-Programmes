@@ -17,3 +17,6 @@ while counter < length:
     final = final + str(chr(asci))
     counter = counter + 1
 print(final)
+
+## ACS Need more comments so we know what is going on.
+## ACS - hello seems to cuase an error?

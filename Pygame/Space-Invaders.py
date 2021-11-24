@@ -74,7 +74,7 @@ class Invader(pygame.sprite.Sprite):
 # - - Define the class Player
 class Player(pygame.sprite.Sprite):
     #Define the constructor for the player
-    def __init__(self, color, width, height, bullet_count):
+    def __init__(self, color, width, height):
         #lives, bullet_count):
         #The sprite constructor
         super().__init__()
@@ -102,17 +102,14 @@ class Player(pygame.sprite.Sprite):
                 self.rect.x = self.rect.x + 5
             elif self.rect.x + 20 == 640:
                 self.rect.x = self.rect.x
-        
-        player_pos_x = self.rect.x
 
         if keys[pygame.K_UP]:
             #if self.bullet_count == 0:
             self.shootbullet()
 
     def shootbullet(self):
-        self.bullet_count = self.bullet_count - 1
         # Creating my bullet
-        my_bullet = Bullet(White, 2, 2, 1)
+        my_bullet = Bullet(White, 2, 2, self.rect.x, 470)
         all_sprites_group.add(my_bullet)
 
 
@@ -125,7 +122,7 @@ class Player(pygame.sprite.Sprite):
 
 # - - Define the class Bullet
 class Bullet(pygame.sprite.Sprite):
-    def __init__(self, color, width, height, speed):
+    def __init__(self, color, width, height, x_pos, y_pos):
         #The sprite instructor
         super().__init__()
         #Create the sprite 
@@ -133,10 +130,8 @@ class Bullet(pygame.sprite.Sprite):
         self.image.fill(color)
         self.rect = self.image.get_rect()
         #Starting position of bullets
-        self.rect.x =  + 5
+        self.x_pos = self.rect.x
         self.rect.y = 470
-        #Set the speed of the bullet
-        self.speed = speed
 
     # Class update function - draws everything for every loop
     def update(self):
@@ -157,7 +152,7 @@ Bullet_group = pygame.sprite.Group()
 all_sprites_group = pygame.sprite.Group()
 
 # Creating my player 
-my_player = Player(Red, player_x, player_y, bullet_count)
+my_player = Player(Red, player_x, player_y)
 all_sprites_group.add(my_player)
 
 #Creating the invaders

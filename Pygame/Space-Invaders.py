@@ -74,8 +74,7 @@ class Invader(pygame.sprite.Sprite):
 # - - Define the class Player
 class Player(pygame.sprite.Sprite):
     #Define the constructor for the player
-    def __init__(self, color, width, height):
-        #lives, bullet_count):
+    def __init__(self, color, width, height):#lives, bullet_count):
         #The sprite constructor
         super().__init__()
         #Create the sprite and fill it with colour
